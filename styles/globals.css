@@ -1,0 +1,66 @@
+@import "tailwindcss/preflight";
+@tailwind utilities;
+@tailwind utilities;
+
+/* 1. CSS variables */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary:    #3b82f6;
+  --secondary:  #6366f1;
+  --muted:      #6b7280;
+  --font-sans:  'Inter', sans-serif;
+  --font-mono:  'Fira Code', monospace;
+}
+
+
+
+
+/* 2. Base styles using raw CSS */
+body {
+  background-color: var(--background);
+  color:            var(--foreground);
+  font-family:      var(--font-sans);
+  line-height:      1.6;
+  min-height:       100vh;
+  transition:       background-color .2s, color .2s;
+  padding:          1rem;
+}
+
+h1 { font-size: 2.25rem; margin-bottom: .75rem; font-weight: 700; }
+h2 { font-size: 1.875rem; margin-bottom: .5rem;  font-weight: 700; }
+p + p { margin-top: 1rem; }
+
+a {
+  color:            var(--primary);
+  text-decoration:  none;
+  transition:       color .15s;
+}
+a:hover {
+  color: var(--secondary);
+}
+
+pre, code {
+  font-family:    var(--font-mono);
+  background-color: var(--muted);
+  background-opacity: 0.1;
+  padding:        .5rem;
+  border-radius:  .375rem;
+  font-size:      .875rem;
+  overflow-x:     auto;
+}
+
+table {
+  width:           100%;
+  border-collapse: collapse;
+  margin-bottom:   1.5rem;
+}
+th, td {
+  border: 1px solid var(--muted);
+  padding: .5rem;
+  text-align: left;
+}
+thead {
+  background-color: var(--muted);
+  opacity:          .2;
+}
