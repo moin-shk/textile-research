@@ -1,4 +1,7 @@
 // app/page.tsx
+export const dynamic = 'force-dynamic'
+
+
 import DashboardClient from '../components/DashboardClient'
 import { supabase }    from '../lib/supabaseClient'
 
